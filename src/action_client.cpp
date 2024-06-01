@@ -4,7 +4,7 @@
 #include <string>
 #include <sstream>
 
-#include "action_pkg/action/action.hpp"
+#include "action_pkg/action.hpp"
 
 #include "rclcpp/rclcpp.hpp"
 #include "rclcpp_action/rclcpp_action.hpp"

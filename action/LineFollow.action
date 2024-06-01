@@ -1,0 +1,30 @@
+
+#goal
+uint8 NAVIGATE = 1
+uint8 ALIGN_W_SILO = 2
+uint8 ALIGN_W_ORIGIN = 3
+
+int32 task
+
+---
+
+#result
+uint8 NAVIGATION_FINISHED = 1
+uint8 ALIGNED_W_SILO = 2
+uint8 ALIGNED_W_ORIGIN = 3
+
+geometry_msgs/Twist final_twist
+geometry_msgs/Pose final_pose
+uint8 robot_state
+
+---
+
+#feedback
+uint8 NAVIGATING= 1
+uint8 ALIGNING_W_SILO = 2
+uint8 ALIGNING_W_ORIGIN = 3
+
+geometry_msgs/Twist current_twist
+geometry_msgs/Pose current_pose
+
+uint8 robot_state

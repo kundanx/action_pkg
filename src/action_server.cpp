@@ -5,7 +5,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "rclcpp_action/rclcpp_action.hpp"
 #include "rclcpp_components/register_node_macro.hpp"
-#include "action_pkg/action/action.hpp"
+#include "action_pkg/action.hpp"
 
 namespace fibonacci_action
 {
