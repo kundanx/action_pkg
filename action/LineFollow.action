@@ -1,17 +1,19 @@
 
 #goal
-uint8 NAVIGATE = 1
-uint8 ALIGN_W_SILO = 2
-uint8 ALIGN_W_ORIGIN = 3
+uint8 NAVIGATE_FROM_START_ZONE = 1
+uint8 NAVIGATE_FROM_RETRY_ZONE = 2
+uint8 ALIGN_W_SILO = 3
+uint8 ALIGN_YAW = 4
 
 int32 task
 
 ---
 
 #result
-uint8 NAVIGATION_FINISHED = 1
-uint8 ALIGNED_W_SILO = 2
-uint8 ALIGNED_W_ORIGIN = 3
+uint8 NAVIGATION_START_ZONE_FINISHED = 1
+uint8 NAVIGATION_RETRY_ZONE_FINISHED = 2
+uint8 ALIGNED_W_SILO = 3
+uint8 ALIGNED_YAW = 4
 
 geometry_msgs/Twist final_twist
 geometry_msgs/Pose final_pose
@@ -20,9 +22,10 @@ uint8 robot_state
 ---
 
 #feedback
-uint8 NAVIGATING= 1
-uint8 ALIGNING_W_SILO = 2
-uint8 ALIGNING_W_ORIGIN = 3
+uint8 NAVIGATING_FROM_START_ZONE= 1
+uint8 NAVIGATING_FROM_RETRY_ZONE= 2
+uint8 ALIGNING_W_SILO = 3
+uint8 ALIGNING_YAW = 4
 
 geometry_msgs/Twist current_twist
 geometry_msgs/Pose current_pose
