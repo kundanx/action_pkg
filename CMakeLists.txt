@@ -24,8 +24,9 @@ endif()
 rosidl_generate_interfaces(${PROJECT_NAME}
   "action/Action.action"
   "action/LineFollow.action"
-  DEPENDENCIES std_msgs
-  geometry_msgs
+  "msg/BallPose.msg"
+  "msg/RobotConfig.msg"
+  DEPENDENCIES std_msgs geometry_msgs
 )
 
 ament_package()

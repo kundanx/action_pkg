@@ -1,0 +1,2 @@
+std_msgs/Bool is_tracked
+geometry_msgs/PoseStamped goalpose
