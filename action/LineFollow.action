@@ -4,8 +4,13 @@ uint8 NAVIGATE_FROM_START_ZONE = 1
 uint8 NAVIGATE_FROM_RETRY_ZONE = 2
 uint8 ALIGN_W_SILO = 3
 uint8 ALIGN_YAW = 4
+uint8 ROTATE_TO_BALL = 5
+uint8 BACK_UP = 6
 
 int32 task
+float64 rotate_to_angle
+float64 back_dist
+std_msgs/UInt8MultiArray silo_numbers
 
 ---
 
@@ -14,10 +19,14 @@ uint8 NAVIGATION_START_ZONE_FINISHED = 1
 uint8 NAVIGATION_RETRY_ZONE_FINISHED = 2
 uint8 ALIGNED_W_SILO = 3
 uint8 ALIGNED_YAW = 4
+uint8 ROTATED_TO_BALL = 5
+uint8 BACKED_UP = 6
 
 geometry_msgs/Twist final_twist
 geometry_msgs/Pose final_pose
+
 uint8 robot_state
+uint8 aligned_silo_number
 
 ---
 
@@ -26,6 +35,8 @@ uint8 NAVIGATING_FROM_START_ZONE= 1
 uint8 NAVIGATING_FROM_RETRY_ZONE= 2
 uint8 ALIGNING_W_SILO = 3
 uint8 ALIGNING_YAW = 4
+uint8 ROTATING_TO_BALL = 5
+uint8 BACKING_UP = 6
 
 geometry_msgs/Twist current_twist
 geometry_msgs/Pose current_pose
